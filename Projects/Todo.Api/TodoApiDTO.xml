@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TodoApiDTO</name>
+    </assembly>
+    <members>
+        <member name="T:TodoApiDTO.Controllers.TodoItemsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TodoApiDTO.Controllers.TodoItemsController.#ctor(Todo.Managers.ITodoManager)">
+            <summary>
+            Initializes new instance of the class <see cref="T:TodoApiDTO.Controllers.TodoItemsController"/>
+            </summary>
+            <param name="todoManager"></param>
+        </member>
+        <member name="M:TodoApiDTO.Controllers.TodoItemsController.GetTodoItems">
+            <summary>
+            Gets all tasks
+            </summary>
+            <returns>IEnumerable of tasks</returns>
+            <response code="200">Tasks are retrieved</response>
+            <response code="500">Internal server error, can not retrieve tasks</response>
+        </member>
+        <member name="M:TodoApiDTO.Controllers.TodoItemsController.GetTodoItem(System.Int64)">
+            <summary>
+            Gets task by id
+            </summary>
+            <param name="id">Task id to search</param>
+            <returns>Found task</returns>
+            <response code="200">Task is retrieved</response>
+            <response code="400">Request model is wrong.</response>
+            <response code="404">Task not found</response>
+            <response code="500">Internal server error, can not retrieve task</response>
+        </member>
+        <member name="M:TodoApiDTO.Controllers.TodoItemsController.UpdateTodoItem(System.Int64,Todo.Dto.TodoDto)">
+            <summary>
+            Updates task
+            </summary>
+            <param name="id">Task id to search</param>
+            <param name="item">Data to update the found task by <paramref name="id"/></param>
+            <returns><see cref="F:System.Net.HttpStatusCode.NoContent"/></returns>
+            <response code="204">Task is updated</response>
+            <response code="400">Request model is wrong.</response>
+            <response code="404">Task not found, can not be updated.</response>
+            <response code="500">Internal server error, can not update task</response>
+        </member>
+        <member name="M:TodoApiDTO.Controllers.TodoItemsController.CreateTodoItem(Todo.Dto.TodoDto)">
+            <summary>
+            Creates new task
+            </summary>
+            <param name="item">Data to create a new task</param>
+            <returns>The newly created task</returns>
+            <response code="201">_Todo is created</response>
+            <response code="400">Request model is wrong.</response>
+            <response code="500">Internal server error, can not create _todo</response>
+        </member>
+        <member name="M:TodoApiDTO.Controllers.TodoItemsController.DeleteTodoItem(System.Int64)">
+            <summary>
+            Deletes _todo
+            </summary>
+            <param name="id">Id of _todo to delete</param>
+            <returns><see cref="F:System.Net.HttpStatusCode.NoContent"/></returns>
+            <response code="204">Task is deleted</response>
+            <response code="400">Request model is wrong.</response>
+            <response code="404">Task not found, can not be deleted.</response>
+            <response code="500">Internal server error, can not delete task</response>
+        </member>
+        <member name="T:TodoApiDTO.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TodoApiDTO.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:TodoApiDTO.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TodoApiDTO.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime.
+            Use this method to add services to the container
+            </summary>
+            <param name="services">See <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> description</param>
+        </member>
+    </members>
+</doc>

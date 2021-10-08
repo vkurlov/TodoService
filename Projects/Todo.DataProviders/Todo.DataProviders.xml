@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Todo.DataProviders</name>
+    </assembly>
+    <members>
+        <member name="T:Todo.DataProviders.Todo.ITodoDataProvider">
+            <summary>
+            Represents _Todo Data Provider
+            </summary>
+        </member>
+        <member name="P:Todo.DataProviders.Todo.ITodoDataProvider.DbContext">
+            <summary>
+            Gets DB Context
+            </summary>
+        </member>
+        <member name="M:Todo.DataProviders.Todo.ITodoDataProvider.IsExist(System.Int64)">
+            <summary>
+            Checks existing of _todo by id
+            </summary>
+            <param name="id">Id to search _todo</param>
+            <returns><c>true</c> when found, otherwise <c>false</c></returns>
+        </member>
+        <member name="M:Todo.DataProviders.Todo.ITodoDataProvider.GetAllTodosAsNoTrackingAsync">
+            <summary>
+            Gets all todos with no tracking
+            </summary>
+            <returns>IEnumerable of todos</returns>
+        </member>
+        <member name="M:Todo.DataProviders.Todo.ITodoDataProvider.GetTodoByIdAsync(System.Int64)">
+            <summary>
+            Gets _todo by id with tracking
+            </summary>
+            <param name="id">Id to search _todo</param>
+            <returns>found _todo</returns>
+        </member>
+        <member name="M:Todo.DataProviders.Todo.ITodoDataProvider.GetTodoByIdAsNoTrackingAsync(System.Int64)">
+            <summary>
+            Gets _todo by id with no tracking
+            </summary>
+            <param name="id">Id to search _todo</param>
+            <returns>found _todo</returns>
+        </member>
+        <member name="T:Todo.DataProviders.Todo.TodoDataProvider">
+            <summary>
+            Represents _Todo Data Provider
+            </summary>
+        </member>
+        <member name="P:Todo.DataProviders.Todo.TodoDataProvider.DbContext">
+            <summary>
+            Gets DB context
+            </summary>
+        </member>
+        <member name="M:Todo.DataProviders.Todo.TodoDataProvider.#ctor(Todo.DomainContext.Contexts.TodoContext)">
+            <summary>
+            Initializes new instance of the class <see cref="T:Todo.DataProviders.Todo.TodoDataProvider"/>
+            </summary>
+            <param name="dbContext">DB context</param>
+        </member>
+        <member name="M:Todo.DataProviders.Todo.TodoDataProvider.IsExist(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Todo.DataProviders.Todo.TodoDataProvider.GetAllTodosAsNoTrackingAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Todo.DataProviders.Todo.TodoDataProvider.GetTodoByIdAsync(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Todo.DataProviders.Todo.TodoDataProvider.GetTodoByIdAsNoTrackingAsync(System.Int64)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

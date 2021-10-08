@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Todo.Dto</name>
+    </assembly>
+    <members>
+        <member name="P:Todo.Dto.TodoDto.Id">
+            <summary>
+            Gets or sets task ID
+            </summary>
+        </member>
+        <member name="P:Todo.Dto.TodoDto.Name">
+            <summary>
+            Gets or sets task name
+            </summary>
+        </member>
+        <member name="P:Todo.Dto.TodoDto.IsComplete">
+            <summary>
+            Gets or sets <c>true</c> when the task is completed, otherwise <c>false</c>
+            </summary>
+        </member>
+    </members>
+</doc>
